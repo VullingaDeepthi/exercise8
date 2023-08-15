@@ -1,0 +1,44 @@
+//exercise:1
+function displayDetails(employee) {
+    let {username, age, salary} = employee;
+    return `${username}, ${age}, ${salary}`;
+  }
+  let employee = {
+    username: "mohan",
+    age: 21,
+    salary: 50000
+  };
+  console.log(displayDetails(employee)); 
+  
+  //exercise:2
+  const Employees = (employees) => {
+    let output = employees.map(employee => `${employee.username}:${employee.age}:${employee.salary}`);
+    output = output.join(", ");
+    return output;
+  };
+  
+  let empl = { username: "mohan", age: 21, salary:50000 };
+  let emp2 = { username: "pankaj", age: 22, salary: 60000 };
+  let input = [empl, emp2];
+  
+  console.log(Employees(input));
+
+  //exercise:3
+  function displayDetails(employee) {
+
+    const username = employee.username;
+    const age = employee.age;
+    const salary = employee.salary;
+    const csvString = `${username},${age},${salary}`;
+  
+    console.log(csvString);
+  }
+
+  const employeeInput = {
+    username: "mohan",
+    age: 21,
+    salary: 50000
+  };
+  
+  displayDetails(employeeInput);
+  
